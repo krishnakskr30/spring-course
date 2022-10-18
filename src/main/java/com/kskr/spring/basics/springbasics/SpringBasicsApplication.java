@@ -7,10 +7,9 @@ import org.w3c.dom.ls.LSOutput;
 @SpringBootApplication
 public class SpringBasicsApplication {
     public static void main(String[] args) {
-        BinarySearchImpl binarySearch = new BinarySearchImpl();
+        BinarySearchImpl binarySearch = new BinarySearchImpl(new BubbleSortAlgorithm());
         int result = binarySearch.binarySearch(new int[]{1, 2, 3}, 3);
         System.out.println(result);
         SpringApplication.run(SpringBasicsApplication.class, args);
-
     }
 }
