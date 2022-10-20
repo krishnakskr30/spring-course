@@ -1,5 +1,6 @@
-package com.kskr.spring.basics;
+package com.kskr.spring;
 
+import com.kskr.spring.basics.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

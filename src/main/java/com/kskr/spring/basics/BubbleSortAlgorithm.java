@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Qualifier("bubble")
-public class BubbleSortAlgorithm implements SortAlgorithm{
+public class BubbleSortAlgorithm implements SortAlgorithm {
     public int[] sort(int[] numbers) {
         //bubble sort logic
         return numbers;

@@ -1,4 +1,4 @@
-package com.kskr.spring.basics.scope;
+package com.kskr.spring.scope;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
