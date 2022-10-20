@@ -1,9 +1,8 @@
-package com.kskr.spring.basics.springbasics;
+package com.kskr.spring.basics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.w3c.dom.ls.LSOutput;
 
 @SpringBootApplication
 public class SpringBasicsApplication {

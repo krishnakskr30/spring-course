@@ -1,4 +1,4 @@
-package com.kskr.spring.basics.springbasics;
+package com.kskr.spring.basics.scope;
 
 import org.springframework.stereotype.Component;
 
