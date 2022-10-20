@@ -1,16 +1,18 @@
 package com.kskr.spring.basics;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan("com.kskr.spring.basics")
 public class SpringBasicsApplication {
     public static void main(String[] args) {
 //        BinarySearchImpl binarySearch = new BinarySearchImpl(new BubbleSortAlgorithm());
 //        int result = binarySearch.binarySearch(new int[]{1, 2, 3}, 3);
 //        System.out.println(result);
-        ApplicationContext applicationContext = SpringApplication.run(SpringBasicsApplication.class, args);
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringBasicsApplication.class);
         BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
         int result = binarySearch.binarySearch(new int[]{1, 2, 3}, 3);
         System.out.println(result);

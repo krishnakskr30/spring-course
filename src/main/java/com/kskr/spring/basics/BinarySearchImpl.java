@@ -1,7 +1,8 @@
 package com.kskr.spring.basics;
+//
+//import jakarta.annotation.PostConstruct;
+//import jakarta.annotation.PreDestroy;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +31,13 @@ public class BinarySearchImpl {
         return 3;
     }
 
-    @PostConstruct
-    public void postConstruct() {
-        logger.info("post-construct");
-    }
-
-    @PreDestroy
-    public void preDestroy() {
-        logger.info("pre-destroy");
-    }
+//    @PostConstruct
+//    public void postConstruct() {
+//        logger.info("post-construct");
+//    }
+//
+//    @PreDestroy
+//    public void preDestroy() {
+//        logger.info("pre-destroy");
+//    }
 }
