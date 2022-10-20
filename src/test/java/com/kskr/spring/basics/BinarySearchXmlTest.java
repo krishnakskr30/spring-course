@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(locations = "/applicationContext.xml")
+@ContextConfiguration(locations = "/testApplicationContext.xml")
 public class BinarySearchXmlTest {
     @Autowired
     BinarySearchImpl binarySearch;
