@@ -13,9 +13,11 @@ public class ComponentScanApplication {
     static Logger LOGGER = LoggerFactory.getLogger(ComponentScanApplication.class);
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ComponentScanApplication.class);
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ComponentScanApplication.class);
         ComponentDAO componentDAO = applicationContext.getBean(ComponentDAO.class);
 
         LOGGER.info("{}", componentDAO);
+
+        applicationContext.close();
     }
 }

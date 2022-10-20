@@ -5,6 +5,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import java.lang.annotation.Annotation;
+
 @Configuration
 @ComponentScan("com.kskr.spring.basics")
 public class SpringBasicsApplication {
@@ -12,9 +14,11 @@ public class SpringBasicsApplication {
 //        BinarySearchImpl binarySearch = new BinarySearchImpl(new BubbleSortAlgorithm());
 //        int result = binarySearch.binarySearch(new int[]{1, 2, 3}, 3);
 //        System.out.println(result);
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringBasicsApplication.class);
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringBasicsApplication.class);
         BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
         int result = binarySearch.binarySearch(new int[]{1, 2, 3}, 3);
         System.out.println(result);
+
+        applicationContext.close();
     }
 }

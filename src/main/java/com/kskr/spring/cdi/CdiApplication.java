@@ -7,16 +7,20 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import java.lang.annotation.Annotation;
+
 @Configuration
 @ComponentScan("com.kskr.spring.cdi")
 public class CdiApplication {
     static Logger LOGGER = LoggerFactory.getLogger(CdiApplication.class);
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(CdiApplication.class);
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(CdiApplication.class);
         CdiBusiness cdiBusiness = applicationContext.getBean(CdiBusiness.class);
 
         LOGGER.info("{}", cdiBusiness);
         LOGGER.info("{}", cdiBusiness.getCdiDAO());
+
+        applicationContext.close();
     }
 }
