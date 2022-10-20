@@ -1,5 +1,9 @@
 package com.kskr.spring.basics;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -8,6 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("prototype")
 public class BinarySearchImpl {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     @Qualifier("quick")
@@ -22,5 +28,15 @@ public class BinarySearchImpl {
         int[] sortedNumbers = sortAlgorithm.sort(numbers);
         //search the array
         return 3;
+    }
+
+    @PostConstruct
+    public void postConstruct() {
+        logger.info("post-construct");
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        logger.info("pre-destroy");
     }
 }
